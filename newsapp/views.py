@@ -268,8 +268,10 @@ def home(request):
 
     handler = ipinfo.getHandler(ipinfo_token)
     ip = get_client_ip(request)
+    print(ip)
     details = handler.getDetails(ip)
     loc = details.city
+    print(loc)
     weather = requests.get(f"https://api.openweathermap.org/data/2.5/weather?q={loc}&units=metric&appid={weathermap}")
     weather_json = weather.json()
     resultsdic = []

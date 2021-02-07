@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        
+
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+    </style>
+
+    
+
+</head>
+<body>
+
+    
+    <ul class="nav nav-tabs mb-2 justify-content-center">
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">{{name|upper}}</a>
+          <ul class="dropdown-menu" style="overflow: auto;max-height: 300px;">
+            <li><a class="dropdown-item" href="{% url 'country' 'ar' %}">ARGENTINA</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'au' %}">AUSTRAILA</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'at' %}">AUSTRIA</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'be' %}">BELGIUM</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'br' %}">BRAZIL</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'bg' %}">BULGARIA</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'ca' %}">CANADA</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'cn' %}">CHINA</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'co' %}">COLOMBIA</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'cu' %}">CUBA</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'cz' %}">CZECH REPUBLIC</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'eg' %}">EGYPT</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'fr' %}">FRANCE</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'de' %}">GERMANY</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'gr' %}">GREECE</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'hk' %}">HONG KONG</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'hu' %}">HUNGARY</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'in' %}">INDIA</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'id' %}">INDONESIA</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'ie' %}">IRELAND</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'il' %}">ISRAEL</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'it' %}">ITALY</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'jp' %}">JAPAN</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'lv' %}">LATVIA</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'lt' %}">LITHUANIA</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'my' %}">MALAYSIA</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'mx' %}">MEXICO</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'ma' %}">MOROCCO</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'nl' %}">NETHERLANDS</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'nz' %}">NEW ZEALAND</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'ng' %}">NIGERIA</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'no' %}">NORWAY</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'ph' %}">PHILIPPINES</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'pl' %}">POLAND</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'pt' %}">PORTUGAL</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'ro' %}">ROMANIA</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'ru' %}">RUSSIA</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'sa' %}">SAUDI ARABIA</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'rs' %}">SERBIA</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'sg' %}">SINGAPORE</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'sk' %}">SLOVAKIA</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'si' %}">SLOVENIA</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'za' %}">SOUTH AFRICA</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'kr' %}">SOUTH KOREA</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'se' %}">SWEDEN</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'ch' %}">SWITZERLAND</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'tw' %}">TAIWAN</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'th' %}">THAILAND</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'tr' %}">TURKEY</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'ae' %}">UAE</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'ua' %}">UKRAINE</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'gb' %}">UNITED KINGDOM</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 'us' %}">UNITED STATES</a></li>
+            <li><a class="dropdown-item" href="{% url 'country' 've' %}">VENUZUELA</a></li>
+            
+          </ul>
+        </li>
+
+        <li>
+
+
+
+            <div >
+                <form action="{% url 'topic'%}" method="POST" class="input-group mb-3">
+                  {%csrf_token%}
+                  <input type="text" class="form-control" oninput="button()" placeholder="Search Topic" name="topicinput" id="topicinput"  aria-label="Example text with button addon" aria-describedby="button-addon1">
+                  <button class="btn btn-outline-secondary" disabled type="submit" id="button-addon1" >Button</button>
+                </form>
+            </div>
+        </li>
+      </ul>
+
+<script>
+  
+  function button(){
+   inputval =  document.getElementById('topicinput').value;
+   
+   if(inputval){
+     document.getElementById('button-addon1').disabled = false;
+   }else{
+    document.getElementById('button-addon1').disabled = true;
+   }
+  }
+</script>
+
+<div class="container justify-content-center" style="align-items: baseline;">
+    <div class="d-flex ">
+      <h6 class="h6">Country Viewing: <span style="color: coral;">{{name|upper}} </span>| </h6>
+
+
+        
+        <div class="dropdown">
+          
+          <button class="btn btn-primary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+            
+            {% if category%}
+            {{category|upper}}
+            {% else %}
+            GENERAL
+            {%endif%}
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item" href="{% url 'countryCategory' countryName 'general' %}">General</a></li>
+            <li><a class="dropdown-item" href="{% url 'countryCategory' countryName 'science' %}">Science</a></li>
+            <li><a class="dropdown-item" href="{% url 'countryCategory' countryName 'business' %}">Business</a></li>
+            <li><a class="dropdown-item" href="{% url 'countryCategory' countryName 'health' %}">Health</a></li>
+            <li><a class="dropdown-item" href="{% url 'countryCategory' countryName 'sports' %}">Sports</a></li>
+            <li><a class="dropdown-item" href="{% url 'countryCategory' countryName 'technology' %}">Technology</a></li>
+            <li><a class="dropdown-item" href="{% url 'countryCategory' countryName 'entertainment' %}">Entertainment</a></li>
+          </ul>
+        </div>
+    </div>
+</div>
+
+
+
+  <div class="container justify-content-center">
+
+    {% if news_list %}
+    {% for news in news_list %}
+    <div class="card" style="width: 15rem;">
+        <img src="{{news.urlToImage}}" class="card-img-top" style="width: 15rem;height: 10rem;" style="overflow: hidden;"/>
+            <div class="card-body">
+                <h5 style="font-weight: bolder;" class="card-title">{{news.title}}</h5>
+                <p class="card-text">{{news.description|truncatewords:10}}</p>
+                <a href="{{news.url}}" class="btn btn-primary">Read More</a>
+            </div>
+    </div>
+    {% endfor %}
+    {%else%}
+    <h1 style="color: red;">No more articles to Show</h1>
+    {% endif %}
+    <div class="container justify-content-between  bg-dark p-2 m-0" style="width: 60rem;">
+        
+      {% if not category %}
+      
+      <form action="{% url 'country' countryName %}" method="POST">
+          {% csrf_token %}
+          {% if pageNum >= 2 %}
+          <button class="btn btn-primary" name="but" value={{pageNum|add:-1}}>Previous</button>
+          {% else %}
+          <button class="btn btn-primary" name="but" disabled value={{pageNum|add:-1}}>Previous</button>
+          {% endif%}
+        </form>
+       
+       
+        <form action="{% url 'country' countryName %}" method="POST">
+          {% csrf_token %}
+          {%if news_list %}
+          <button class="btn btn-primary" name="but" value={{pageNum|add:1}}>Next</button>
+          {% else %}
+          <button class="btn btn-primary" disabled name="but" value={{pageNum|add:1}}>Next</button>
+          {% endif %}
+        </form>
+
+        {% else %}
+
+        <form action="{% url 'countryCategory' countryName category %}" method="POST">
+          {% csrf_token %}
+          {% if pageNum >= 2 %}
+          <button class="btn btn-primary" name="but" value={{pageNum|add:-1}}>Previous</button>
+          {% else %}
+          <button class="btn btn-primary" name="but" disabled value={{pageNum|add:-1}}>Previous</button>
+          {% endif%}
+        </form>
+       
+       
+        <form action="{% url 'countryCategory' countryName category %}" method="POST">
+          {% csrf_token %}
+          {%if news_list %}
+          <button class="btn btn-primary" name="but" value={{pageNum|add:1}}>Next</button>
+          {% else %}
+          <button class="btn btn-primary" disabled name="but" value={{pageNum|add:1}}>Next</button>
+          {% endif %}
+        </form>
+      {% endif %}
+    </div>
+  </div>
+
+  
+
+</body>
+
+</html>

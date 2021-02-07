@@ -247,6 +247,14 @@ def topic(request):
 
 def home(request):
 
+    def get_client_ip(request):
+        x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+        if x_forwarded_for:
+            ip = x_forwarded_for.split(',')[0]
+        else:
+            ip = request.META.get('REMOTE_ADDR')
+        return ip
+
     countriesDic = {
         'in':'india',
         'us':'USA',
@@ -259,7 +267,7 @@ def home(request):
         }
 
     handler = ipinfo.getHandler(ipinfo_token)
-    ip = request.META.get('REMOTE_ADDR')
+    ip = get_client_ip(request)
     details = handler.getDetails(ip)
     loc = details.city
     weather = requests.get(f"https://api.openweathermap.org/data/2.5/weather?q={loc}&units=metric&appid={weathermap}")

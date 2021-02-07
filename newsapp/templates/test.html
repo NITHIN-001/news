@@ -16,6 +16,16 @@
     <style>
         
 
+        .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(182, 178, 178, 0.384);
+    color: white;
+    text-align: center;
+}
+
         @media only screen and (max-width:1080){
             .scollb::-webkit-scrollbar{
             display: none;
@@ -121,8 +131,8 @@
       date = new Date();
       hours = date.getHours();
       minutes = date.getMinutes();
-      seconds = date.getSeconds();
-      current_time = `${hours}:${minutes}:${seconds}`;
+      
+      current_time = `${hours}:${minutes}`;
       document.getElementById('time').innerHTML = current_time
   }
 
@@ -178,8 +188,10 @@
         </div>
         
         
-        
     </div>
-
+    <div class="footer">
+        <p>Designed & Developed by <a href="https://www.instagram.com/vilas_______/">Vilas Kathera</a></p>
+      </div>
+    
 </body>
 </html>

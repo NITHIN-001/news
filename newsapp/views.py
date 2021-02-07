@@ -287,5 +287,5 @@ def home(request):
     
     
 
-    num = range(0,21)
+    
     return render(request,'test.html',{"news_list":news_list,"countryList":countriesDic,"resultsdic":resultsdic,"weather":weather_json,"loc":loc,"reg":reg})

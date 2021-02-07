@@ -16,9 +16,7 @@
         }
 
   .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
+    
     width: 100%;
     background-color: rgba(182, 178, 178, 0.384);
     color: white;
@@ -157,8 +155,8 @@
 
     {% if news_list %}
     {% for news in news_list %}
-    <div class="card" style="width: 15rem;">
-        <img src="{{news.urlToImage}}" class="card-img-top" style="width: 15rem;height: 10rem;" style="overflow: hidden;"/>
+    <div class="card" style="width: 100%;">
+        <img src="{{news.urlToImage}}" class="card-img-top" style="width: auto;height: 10rem;" style="overflow: hidden;"/>
             <div class="card-body">
                 <h5 style="font-weight: bolder;" class="card-title">{{news.title}}</h5>
                 <p class="card-text">{{news.description|truncatewords:10}}</p>
@@ -217,7 +215,7 @@
   </div>
 
   <div class="footer">
-    <p>Designed & Developed by <a href="https://www.instagram.com/vilas_______/">Vilas Kathera</a></p>
+    <p>Developed by <a href="https://www.instagram.com/vilas_______/">Vilas Kathera</a></p>
   </div>
 
 </body>

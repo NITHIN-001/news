@@ -279,7 +279,9 @@ def home(request):
         
         news = requests.get(f"https://newsapi.org/v2/top-headlines?country={x}&pageSize=10&apiKey={apikey[0]}")
         news_list = news.json()
-        
+        if(news_list['status'] != "ok"):
+            news = requests.get(f"https://newsapi.org/v2/top-headlines?country={x}&pageSize=10&apiKey={apikey[1]}")
+            news_list = news.json()
         news_list["country"] = countriesDic[x]
         news_list["countryCode"] = x
         resultsdic.append(news_list)

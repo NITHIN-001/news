@@ -229,7 +229,7 @@ def topic(request):
     }
     name="india"
     topicinput = "covid-19"
-    apikey = "55f7d6b91d8445b9be9fa8599e30a932"
+    
     pagenumber = 1
     
     if(request.method == "POST"):
@@ -237,9 +237,16 @@ def topic(request):
         if(request.POST.get("pagenum")):
             pagenumber = int(request.POST.get("pagenum"))
 
-    url = f"https://newsapi.org/v2/everything?q={topicinput}&pageSize=50&page={pagenumber}&apiKey={apikey}"
+    url = f"https://newsapi.org/v2/everything?q={topicinput}&pageSize=50&page={pagenumber}&apiKey={apikey[0]}"
     news = requests.get(url)
     news_formatted =  news.json()
+    if(news_formatted['status'] != 'ok'):
+        url = f"https://newsapi.org/v2/everything?q={topicinput}&pageSize=50&page={pagenumber}&apiKey={apikey[1]}"
+        news = requests.get(url)
+        news_formatted =  news.json()
+
+
+
 
 
     return render(request,'topic.html',{"news_list":news_formatted["articles"],"topicname":topicinput,"pagenumber":pagenumber,"name":name})

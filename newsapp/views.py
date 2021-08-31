@@ -3,14 +3,14 @@ from django.http import HttpResponse
 import ipinfo
 import requests
 # Create your views here.
-apikey = ["55f7d6b91d8445b9be9fa8599e30a932","227d497ed1e44439b2d709f21dddf5f5"]
+apikey = ["d1e2d12e8f7c4323af2f5468e0053752","83a6c0fa33d14665aff9b181e18d0509"]
 ipinfo_token = "7d5765cb4b4bc8"
 weathermap = "04627a171de78262fa1dc9b42ec992e8"
 
 def index(request):
     
     countries = "in"
-    apikey = "55f7d6b91d8445b9be9fa8599e30a932"
+    apikey = "d1e2d12e8f7c4323af2f5468e0053752"
     
     url = f"https://newsapi.org/v2/top-headlines?country={countries}&apiKey={apikey}"
     news = requests.get(url)
@@ -81,7 +81,7 @@ def countrySpecific(request,name):
     }
 
     countries = name
-    apikey = "55f7d6b91d8445b9be9fa8599e30a932"
+    apikey = "d1e2d12e8f7c4323af2f5468e0053752"
     pageNum = 1
     print(request.POST.get("but"))
     if(request.method == "POST"):
@@ -155,7 +155,7 @@ def countryCategory(request,name,category):
     }
 
     countries = name
-    apikey = "55f7d6b91d8445b9be9fa8599e30a932"
+    apikey = "d1e2d12e8f7c4323af2f5468e0053752"
     pageNum = 1
     
     if(request.method == "POST"):

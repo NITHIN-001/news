@@ -10,7 +10,7 @@ weathermap = "04627a171de78262fa1dc9b42ec992e8"
 def index(request):
     
     countries = "in"
-    apikey = "d1e2d12e8f7c4323af2f5468e0053752"
+    apikey = "83a6c0fa33d14665aff9b181e18d0509"
     
     url = f"https://newsapi.org/v2/top-headlines?country={countries}&apiKey={apikey}"
     news = requests.get(url)
@@ -261,7 +261,7 @@ def home(request):
         else:
             ip = request.META.get('REMOTE_ADDR')
         return ip
-
+    
     countriesDic = {
         'in':'india',
         'us':'USA',
@@ -281,6 +281,7 @@ def home(request):
     reg = details.region
     weather = requests.get(f"https://api.openweathermap.org/data/2.5/weather?q={loc}&units=metric&appid={weathermap}")
     weather_json = weather.json()
+    
     resultsdic = []
     for x in countriesDic:
         
@@ -293,8 +294,4 @@ def home(request):
         news_list["countryCode"] = x
         resultsdic.append(news_list)
 
-    
-    
-
-    
     return render(request,'test.html',{"news_list":news_list,"countryList":countriesDic,"resultsdic":resultsdic,"weather":weather_json,"loc":loc,"reg":reg})

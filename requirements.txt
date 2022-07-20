@@ -12,6 +12,7 @@ gunicorn==20.0.4
 idna==2.10
 ipinfo==4.1.0
 multidict==5.1.0
+psycopg2==2.8.6
 pytz==2021.1
 requests==2.25.1
 six==1.15.0
